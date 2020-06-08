@@ -127,6 +127,10 @@
         animation-timing-function: ease-in-out;
         animation-duration: 5s;
         animation-iteration-count:infinite;
+        -webkit-animation-name: animateDescription ;
+        -webkit-animation-timing-function: ease-in-out;
+        -webkit-animation-duration: 5s;
+        -webkit-animation-iteration-count:infinite;
       }
       /* #activitiesSvg{
         /* visibility: collapse; */
@@ -161,6 +165,26 @@
       
       
       @keyframes animateDescription{
+        0%{
+            content:"Coder";
+        }
+        20%{
+            content:"Creator";
+        }
+        40%{
+            content:"Developer";
+        }
+        60%{
+          content:"Engineer";
+        }
+        80%{
+          content:"Explorer";
+        }
+        100%{
+          content:"Coder";
+        }
+      }
+      @-webkit-keyframes animateDescription{
         0%{
             content:"Coder";
         }
