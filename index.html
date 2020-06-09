@@ -208,6 +208,10 @@
       .carousel-item:nth-child(3){
         overflow-y: scroll;
       }
+
+      #linkedin:hover+p{
+        content:"LinkedIn";
+      } 
       
         /* .carousel-indicators li{
           width: 10px;
@@ -235,6 +239,19 @@
             right:0;
             left:0;
           }
+          .carousel-item:nth-child(4) a, .carousel-item:nth-child(4) a:hover {
+            /* color: #000; */
+            text-decoration: none;
+            padding: 5px 0px;
+          }
+          .socialbtnsbtnsbtns li {
+              display: block;
+          }
+
+          .socialbtns li {
+              display: block;
+          }
+          
       }
           
 
@@ -1021,16 +1038,16 @@
                     <li><a href="#" class="fa fa-lg fa-youtube"></a></li>
                     </ul> -->
                   <ul class="list-inline">
-                    <li><a target="_blank" href="https://www.linkedin.com/in/chetan-surana-015/" class="fab fa-2x fa-linkedin-in"></a></li>
-                    <li><a target="_blank" href="https://github.com/chetan015" class="fab fa-2x fa-github"></a></li>
-                    <li><a target="_blank" href="mailto:chetansurana015@gmail.com" class="fas fa-2x fa-envelope"></a></li>
-                    <li><a target="_blank" href="https://www.instagram.com/chetansurana015/" class="fab fa-2x fa-instagram"></a></li>
-                    <li><a target="_blank" href="https://www.facebook.com/chetansurana97/" class="fab fa-2x fa-facebook"></a></li>
-                    
+                    <li><a target="_blank" id="LinkedIn" href="https://www.linkedin.com/in/chetan-surana-015/" class="fab fa-2x fa-linkedin-in"></a></li>
+                    <li><a target="_blank" id="Github" href="https://github.com/chetan015" class="fab fa-2x fa-github"></a></li>
+                    <li><a target="_blank" id="Email" href="mailto:chetansurana015@gmail.com" class="fal fa-2x fa-envelope"></a></li>
+                    <li><a target="_blank" id="Instagram" href="https://www.instagram.com/chetansurana015/" class="fab fa-2x fa-instagram"></a></li>
+                    <li><a target="_blank" id="Facebook" href="https://www.facebook.com/chetansurana97/" class="fab fa-2x fa-facebook"></a></li>
+                    <li><a target="_blank" id="Resume" href="Resume_Chetan Surana.pdf" class="fas fa-2x fa-file-user" download="Chetan Surana"></a></li>
                   </ul>
-                  
                   </div>
-                    
+                  <p class="h3 text-center"><span id="iconSpan" style="visibility: hidden;">Social</span></p>
+                      
                 
               </div>
             </div>
@@ -1085,6 +1102,8 @@
             else{
               $("#left-arrow,#right-arrow").css("display","inline-block");
               if(activeIdx==1){
+                $("#activitySpan").text("Balance | Exploration");
+                $("#skillSpan").text("AI | Data Science | Web");
                 var checked = $(".ios-switch").is(":checked");
                 if(checked)
                   lightMode();
@@ -1111,8 +1130,13 @@
             }
             
           });
+          $(".socialbtns ul li a").hover(function(){$("#iconSpan").text(this.id);$("#iconSpan").css("visibility","visible")});
+          $(".socialbtns ul li a").on("mouseout",function(){$("#iconSpan").css("visibility","hidden")});
+
       });
       function toggleSvg(){
+          $("#activitySpan").text("Balance | Exploration");
+          $("#skillSpan").text("AI | Data Science | Web");
           var checked = $(".ios-switch").is(":checked");
           if(checked){
             lightMode();

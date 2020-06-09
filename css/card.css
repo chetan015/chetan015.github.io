@@ -157,7 +157,7 @@ section .section-title {
     display: inline-block;
 }
 
-.socialbtns .fab,.socialbtns .fas {
+.socialbtns .fab,.socialbtns .fas,.socialbtns .fal {
 	color: #FFF;
 	text-shadow: 1px 1px 0px #000,
 			1px -1px 0px #000,
@@ -181,7 +181,7 @@ section .section-title {
 	-o-transition: all ease-out 0.5s;
 }
 
-.socialbtns .fab:hover, .socialbtns .fas:hover {
+.socialbtns .fab:hover, .socialbtns .fas:hover, .socialbtns .fal:hover {
 	color: #000;
 	text-shadow: 1px 1px 0px #fff,
 			1px -1px 0px #fff,
